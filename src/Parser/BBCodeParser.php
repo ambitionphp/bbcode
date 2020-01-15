@@ -72,7 +72,7 @@ final class BBCodeParser extends Parser
         ],
         'image' => [
             'pattern' => '/\[img\](.*?)\[\/img\]/s',
-            'replace' => '<img src="$1">',
+            'replace' => '<img class="img-fluid" src="$1">',
             'content' => '$1'
         ],
         'orderedlistnumerical' => [
@@ -102,7 +102,7 @@ final class BBCodeParser extends Parser
         ],
         'youtube' => [
             'pattern' => '/\[youtube\](.*?)\[\/youtube\]/s',
-            'replace' => '<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/$1" frameborder="0" allowfullscreen></iframe>',
+            'replace' => '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="//www.youtube-nocookie.com/embed/$1" frameborder="0" allowfullscreen></iframe></div>',
             'content' => '$1'
         ],
         'sub' => [
